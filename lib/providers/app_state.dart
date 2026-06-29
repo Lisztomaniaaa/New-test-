@@ -20,11 +20,7 @@ class AppState with ChangeNotifier {
   Future<bool> verifyAndSetApiKey(String key) async {
     // Basic mock verification. In a real app, you'd make a test API call.
     await Future.delayed(Duration(seconds: 1)); // Simulate network request
-<<<<<<< HEAD
 
-=======
-
->>>>>>> b0a5eb8 (temp)
     if (key.length > 10) { // Simple mock validation
       _apiKey = key;
       final prefs = await SharedPreferences.getInstance();

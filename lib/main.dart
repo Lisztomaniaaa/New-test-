@@ -8,11 +8,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final appState = AppState();
   await appState.loadSavedData();
-<<<<<<< HEAD
 
-=======
-
->>>>>>> b0a5eb8 (temp)
   runApp(
     ChangeNotifierProvider.value(
       value: appState,
