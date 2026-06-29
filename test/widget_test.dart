@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+<<<<<<< HEAD
 
 import 'package:ai_chat_app/main.dart';
 
@@ -26,5 +27,27 @@ void main() {
     // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
+=======
+import 'package:provider/provider.dart';
+
+import 'package:ai_chat_app/main.dart';
+import 'package:ai_chat_app/providers/app_state.dart';
+
+void main() {
+  testWidgets('AuthScreen shows initially', (WidgetTester tester) async {
+    final appState = AppState();
+
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(
+      ChangeNotifierProvider.value(
+        value: appState,
+        child: MyApp(),
+      ),
+    );
+
+    // Verify that the AuthScreen is displayed.
+    expect(find.text('Setup AI Chat'), findsOneWidget);
+    expect(find.text('Enter API Key'), findsOneWidget);
+>>>>>>> b0a5eb8 (temp)
   });
 }

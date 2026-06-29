@@ -31,7 +31,11 @@ class _AuthScreenState extends State<AuthScreen> {
     try {
       final appState = Provider.of<AppState>(context, listen: false);
       final isValid = await appState.verifyAndSetApiKey(apiKey);
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> b0a5eb8 (temp)
       if (!mounted) return;
 
       if (isValid) {
@@ -79,8 +83,13 @@ class _AuthScreenState extends State<AuthScreen> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _isLoading ? null : _verifyApiKey,
+<<<<<<< HEAD
               child: _isLoading
                 ? CircularProgressIndicator()
+=======
+              child: _isLoading
+                ? CircularProgressIndicator()
+>>>>>>> b0a5eb8 (temp)
                 : Text('Verify & Continue'),
             ),
           ],
